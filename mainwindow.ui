@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>1024</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="MenuPage">
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>110</y>
+          <width>301</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Количество компаний</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spinBox">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="start">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Начать игру</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="InitInfoPage">
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>489</x>
+          <y>332</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Далее</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="InitInfoTable">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>40</y>
+          <width>393</width>
+          <height>182</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <row>
+         <property name="text">
+          <string>Компаний</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Кораблей</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Кораблей на компанию</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Баланс на компанию</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Глубоководная рыба</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Прибрежная рыба</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string/>
+         </property>
+        </column>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="InfoPage">
+       <widget class="QTableWidget" name="WaterInfoTable">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>499</width>
+          <height>235</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>180</number>
+        </attribute>
+        <attribute name="horizontalHeaderHighlightSections">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>29</number>
+        </attribute>
+        <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>30</number>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>19</number>
+        </attribute>
+        <row>
+         <property name="text">
+          <string>Популяция</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Плотность</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Новая рыба</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Улов</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Флот</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Улов на судно</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Погода</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>Глубоководная зона</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Прибрежная зона</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="geometry">
+         <rect>
+          <x>490</x>
+          <y>370</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Далее</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="CompaniesInfoTable">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>50</y>
+          <width>442</width>
+          <height>115</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <property name="autoScrollMargin">
+         <number>16</number>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>110</number>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>43</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Компания</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Баланс</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Флот</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Имущество</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </column>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="GamePage">
+       <widget class="QTableWidget" name="YearTable">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>70</y>
+          <width>502</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <row>
+         <property name="text">
+          <string>Глубоководный улов</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Прибрежный улов</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Цена за рыбу</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Объем продаж</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Процент</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Банк</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Флот</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+       </widget>
+       <widget class="QTableWidget" name="InputTable">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>380</y>
+          <width>501</width>
+          <height>201</height>
+         </rect>
+        </property>
+        <row>
+         <property name="text">
+          <string>Суда с аукциона</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Деньги на аукцион</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Заказ новых судов</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Глубоководная зона</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Прибрежная зона</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Гавань</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+       </widget>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="geometry">
+         <rect>
+          <x>610</x>
+          <y>60</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Закончить год</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="addButton">
+        <property name="geometry">
+         <rect>
+          <x>820</x>
+          <y>140</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Добавить</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="DealTable">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>190</y>
+          <width>478</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>115</number>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Продавец</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Покупатель</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Кол-во судов</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Стоимость</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </column>
+       </widget>
+       <widget class="QTableWidget" name="CompanyTable">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>400</y>
+          <width>421</width>
+          <height>251</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="company1">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>350</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 1</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="company2">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>350</y>
+          <width>91</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 2</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="company3">
+        <property name="geometry">
+         <rect>
+          <x>770</x>
+          <y>350</y>
+          <width>91</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 3</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="company4">
+        <property name="geometry">
+         <rect>
+          <x>860</x>
+          <y>350</y>
+          <width>91</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 4</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="company5">
+        <property name="geometry">
+         <rect>
+          <x>950</x>
+          <y>350</y>
+          <width>91</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 5</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="company6">
+        <property name="geometry">
+         <rect>
+          <x>1040</x>
+          <y>350</y>
+          <width>91</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 6</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="checkMessage">
+        <property name="geometry">
+         <rect>
+          <x>750</x>
+          <y>60</y>
+          <width>271</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Проверьте расположение судов по зонам</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>start</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>start()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>87</x>
+     <y>228</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>nextPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>574</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>648</x>
+     <y>326</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>nextPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>528</x>
+     <y>390</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>655</x>
+     <y>365</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>calc()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>729</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1282</x>
+     <y>305</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addButton</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>addDeal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>829</x>
+     <y>179</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>471</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>company1</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>activeCompany()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>374</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1285</x>
+     <y>458</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>company2</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>activeCompany()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>767</x>
+     <y>382</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1280</x>
+     <y>433</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>company3</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>activeCompany()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>816</x>
+     <y>379</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1284</x>
+     <y>398</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>company4</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>activeCompany()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>906</x>
+     <y>377</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1279</x>
+     <y>381</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>company5</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>activeCompany()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>999</x>
+     <y>367</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1283</x>
+     <y>355</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>company6</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>activeCompany()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1127</x>
+     <y>374</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1281</x>
+     <y>344</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>start()</slot>
+  <slot>nextPage()</slot>
+  <slot>calc()</slot>
+  <slot>addDeal()</slot>
+  <slot>activeCompany()</slot>
+ </slots>
+</ui>
