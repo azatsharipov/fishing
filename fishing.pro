@@ -5,8 +5,9 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += network
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 TARGET = fishing
 TEMPLATE = app
@@ -16,11 +17,13 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     game.cpp \
     player.cpp \
-    zone.cpp
+    zone.cpp \
+    qcustomplot.cpp
 
 HEADERS  += mainwindow.h \
     game.h \
     player.h \
-    zone.h
+    zone.h \
+    qcustomplot.h
 
 FORMS    += mainwindow.ui

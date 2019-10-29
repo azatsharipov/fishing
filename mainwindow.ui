@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="MenuPage">
        <widget class="QWidget" name="layoutWidget">
@@ -71,6 +71,19 @@
           </widget>
          </item>
         </layout>
+       </widget>
+       <widget class="QLabel" name="usersAmount">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>120</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Количество подключенных: 0</string>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="InitInfoPage">
@@ -667,6 +680,220 @@
          <string>Проверьте расположение судов по зонам</string>
         </property>
        </widget>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="geometry">
+         <rect>
+          <x>1030</x>
+          <y>600</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Закончить игру</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="GameOverPage">
+       <widget class="QCustomPlot" name="graph" native="true">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>120</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graph_2" native="true">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>120</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graph_3" native="true">
+        <property name="geometry">
+         <rect>
+          <x>830</x>
+          <y>120</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graph_4" native="true">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>370</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graph_5" native="true">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>370</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graph_6" native="true">
+        <property name="geometry">
+         <rect>
+          <x>830</x>
+          <y>370</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="ChoosePage">
+       <widget class="QPushButton" name="singlegame">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>110</y>
+          <width>241</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Одиночная игра</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="admin">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>170</y>
+          <width>241</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Сетевая игра(администратор)</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="player">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>230</y>
+          <width>241</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Сетевая игра(игрок)</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="UserPage">
+       <widget class="QLabel" name="waitMessage">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>90</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ожидание сервева</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="UserInputTable">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>150</y>
+          <width>331</width>
+          <height>201</height>
+         </rect>
+        </property>
+        <row>
+         <property name="text">
+          <string>Суда с аукциона</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Деньги на аукцион</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Заказ новых судов</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Глубоководная зона</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Прибрежная зона</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Гавань</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </row>
+       </widget>
+       <widget class="QPushButton" name="send">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>310</y>
+          <width>91</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Отправить</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </item>
@@ -674,6 +901,14 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
   <connection>
@@ -852,6 +1087,70 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>singlegame</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>nextPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>200</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>6</x>
+     <y>153</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>admin</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>startServer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>114</x>
+     <y>201</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>player</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>joinToServer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>269</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>endGame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1077</x>
+     <y>626</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1282</x>
+     <y>651</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>start()</slot>
@@ -859,5 +1158,8 @@
   <slot>calc()</slot>
   <slot>addDeal()</slot>
   <slot>activeCompany()</slot>
+  <slot>startServer()</slot>
+  <slot>joinToServer()</slot>
+  <slot>endGame()</slot>
  </slots>
 </ui>

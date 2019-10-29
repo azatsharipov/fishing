@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <game.h>
+#include <QtNetwork/QTcpSocket>
+#include <QtNetwork/QTcpServer>
 
 namespace Ui {
 class MainWindow;
@@ -19,6 +21,16 @@ private:
     Ui::MainWindow *ui;
     Game game;
     QTableWidget comps[6];
+    QTcpServer *tcpServer;
+    QTcpSocket *user;
+    int serverStatus = 0;
+    int usersAmount = 0;
+    int userNumber = 0;
+    bool isServer = false;
+    bool isGameOver = false;
+    quint16 m_nNextBlockSize = 0;
+    QMap<int, QTcpSocket *> SClients;
+
 public slots:
     void start();
     void nextPage();
@@ -32,6 +44,19 @@ public slots:
     void initWaterInfoTable();
     void initYearTable(int n);
     void initInputTable(int n);
+    void endGame();
+    void drawGraphs();
+
+    void startServer();
+    void newUser();
+    void slotReadClient();
+    void sendToClient();
+
+    void joinToServer();
+    void slotConnected();
+    void sendToServer();
+    void slotReadyRead();
+    void initUserInputTable();
 };
 
 #endif // MAINWINDOW_H

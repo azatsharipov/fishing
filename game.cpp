@@ -104,7 +104,7 @@ void Game::setShips(QTableWidget *input) {
 void Game::setCatch() {
     for (int i = 0; i < playersAmount; i++) {
         players[i].setCatch(deep.catchPerPlayer, coastal.catchPerPlayer);
-        int money = players[i].getDeepShip() * 250 + players[i].getCoastalShip() * 150;
+        int money = players[i].getDeepShip() * 250 + players[i].getCoastalShip() * 150 + players[i].getHarborShip() * 50;
         players[i].addMoney(-money);
     }
 }
