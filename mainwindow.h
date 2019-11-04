@@ -44,8 +44,11 @@ public slots:
     void initWaterInfoTable();
     void initYearTable(int n);
     void initInputTable(int n);
+//    void updateHarbor(int row, int column);
+    void updateHarbor(int);
     void endGame();
     void drawGraphs();
+    void back();
 
     void startServer();
     void newUser();

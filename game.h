@@ -16,7 +16,7 @@ public:
     Game(int);
     Game(int, QTableWidget *init);
     int getPlayersAmount() const;
-    bool checkShipsOk();
+    bool checkShipsOk(QTableWidget *input, QTableWidget *deal);
     void endYear(QTableWidget *deal, QTableWidget *t, QTableWidget *compsInfo);
     void setPlayersAmount(int value);
     void setShips(QTableWidget *t);
@@ -25,6 +25,7 @@ public:
     void updateCompsTable(QTableWidget *comps);
     void updateWaterInfoTable(QTableWidget *t, QTableWidget *water);
     void updateYearTable(QTableWidget *t, QTableWidget *years);
+    void updateHarbor(QTableWidget *t, QTableWidget *deal);
     int getYear() const;
 };
 

@@ -690,7 +690,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>Закончить игру</string>
+         <string>Графики</string>
         </property>
        </widget>
       </widget>
@@ -729,7 +729,7 @@
         <property name="geometry">
          <rect>
           <x>110</x>
-          <y>370</y>
+          <y>410</y>
           <width>331</width>
           <height>211</height>
          </rect>
@@ -739,7 +739,7 @@
         <property name="geometry">
          <rect>
           <x>470</x>
-          <y>370</y>
+          <y>410</y>
           <width>331</width>
           <height>211</height>
          </rect>
@@ -749,10 +749,101 @@
         <property name="geometry">
          <rect>
           <x>830</x>
-          <y>370</y>
+          <y>410</y>
           <width>331</width>
           <height>211</height>
          </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph1Name">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>60</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 1</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph2Name">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>60</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 2</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph3Name">
+        <property name="geometry">
+         <rect>
+          <x>840</x>
+          <y>60</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 3</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph4Name">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>360</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 4</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph5Name">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>360</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 5</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph6Name">
+        <property name="geometry">
+         <rect>
+          <x>830</x>
+          <y>350</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 6</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="geometry">
+         <rect>
+          <x>1020</x>
+          <y>20</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>назад</string>
         </property>
        </widget>
       </widget>
@@ -1151,6 +1242,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>back()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1060</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1015</x>
+     <y>5</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>start()</slot>
@@ -1161,5 +1268,6 @@
   <slot>startServer()</slot>
   <slot>joinToServer()</slot>
   <slot>endGame()</slot>
+  <slot>back()</slot>
  </slots>
 </ui>

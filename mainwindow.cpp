@@ -165,7 +165,14 @@ void MainWindow::initInputTable(int n) {
             ui->InputTable->setCellWidget(i, j, spinbox);
             spinbox = (QSpinBox*) ui->InputTable->cellWidget(i, j);
             spinbox->setMaximum(100000);
+            if (i == 5)
+                spinbox->setValue(8);
+            connect(spinbox, SIGNAL(valueChanged(int)), this, SLOT(updateHarbor(int)));
         }
+}
+
+void MainWindow::updateHarbor(int value) {
+    game.updateHarbor(ui->InputTable, ui->DealTable);
 }
 
 void MainWindow::start() {
@@ -326,7 +333,7 @@ void MainWindow::unsizeCompanies() {
 void MainWindow::calc() {
 //    updateCompany(getActiveCompany());
     game.setShips(ui->InputTable);
-    if (!game.checkShipsOk()) {
+    if (!game.checkShipsOk(ui->InputTable, ui->DealTable)) {
         ui->checkMessage->setVisible(true);
         return;
     }
@@ -362,6 +369,7 @@ void MainWindow::addDeal() {
             spinbox->setMaximum(100000);
         }
         ui->DealTable->setCellWidget(ui->DealTable->rowCount() - 1, i, spinbox);
+        connect(spinbox, SIGNAL(valueChanged(int)), this, SLOT(updateHarbor(int)));
     }
 }
 
@@ -432,9 +440,13 @@ int MainWindow::getActiveCompany() {
 
 void MainWindow::endGame() {
     nextPage();
-    isGameOver = true;
-    calc();
+//    isGameOver = true;
+//    calc();
     drawGraphs();
+}
+
+void MainWindow::back() {
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->currentIndex() - 1);
 }
 
 void MainWindow::drawGraphs() {
@@ -484,6 +496,11 @@ void MainWindow::drawGraphs() {
     ui->graph_4->setVisible(false);
     ui->graph_5->setVisible(false);
     ui->graph_6->setVisible(false);
+    ui->graph2Name->setVisible(false);
+    ui->graph3Name->setVisible(false);
+    ui->graph4Name->setVisible(false);
+    ui->graph5Name->setVisible(false);
+    ui->graph6Name->setVisible(false);
     ui->graph->addGraph();
     ui->graph->graph(0)->setData(x[0], y[0]);
     ui->graph->xAxis->setRange(a, b);//Для оси Ox
@@ -492,37 +509,42 @@ void MainWindow::drawGraphs() {
         ui->graph_2->graph(0)->setData(x[1], y[1]);
         ui->graph_2->xAxis->setRange(a, b);//Для оси Ox
         ui->graph_2->setVisible(true);
+        ui->graph2Name->setVisible(true);
     }
     if (playersAmount > 2) {
         ui->graph_3->addGraph();
         ui->graph_3->graph(0)->setData(x[2], y[2]);
         ui->graph_3->xAxis->setRange(a, b);//Для оси Ox
         ui->graph_3->setVisible(true);
+        ui->graph3Name->setVisible(true);
     }
     if (playersAmount > 3) {
         ui->graph_4->addGraph();
         ui->graph_4->graph(0)->setData(x[3], y[3]);
         ui->graph_4->xAxis->setRange(a, b);//Для оси Ox
         ui->graph_4->setVisible(true);
+        ui->graph4Name->setVisible(true);
     }
     if (playersAmount > 4) {
         ui->graph_5->addGraph();
         ui->graph_5->graph(0)->setData(x[4], y[4]);
         ui->graph_5->xAxis->setRange(a, b);//Для оси Ox
         ui->graph_5->setVisible(true);
+        ui->graph5Name->setVisible(true);
     }
     if (playersAmount > 5) {
         ui->graph_6->addGraph();
         ui->graph_6->graph(0)->setData(x[5], y[5]);
         ui->graph_6->xAxis->setRange(a, b);//Для оси Ox
         ui->graph_6->setVisible(true);
+        ui->graph6Name->setVisible(true);
     }
-    ui->graph->yAxis->setRange(0, maxY);//Для оси Oy
-    ui->graph_2->yAxis->setRange(0, maxY);//Для оси Oy
-    ui->graph_3->yAxis->setRange(0, maxY);//Для оси Oy
-    ui->graph_4->yAxis->setRange(0, maxY);//Для оси Oy
-    ui->graph_5->yAxis->setRange(0, maxY);//Для оси Oy
-    ui->graph_6->yAxis->setRange(0, maxY);//Для оси Oy
+    ui->graph->yAxis->setRange(minY, maxY);//Для оси Oy
+    ui->graph_2->yAxis->setRange(minY, maxY);//Для оси Oy
+    ui->graph_3->yAxis->setRange(minY, maxY);//Для оси Oy
+    ui->graph_4->yAxis->setRange(minY, maxY);//Для оси Oy
+    ui->graph_5->yAxis->setRange(minY, maxY);//Для оси Oy
+    ui->graph_6->yAxis->setRange(minY, maxY);//Для оси Oy
 
     //И перерисуем график на нашем widget
     ui->graph->replot();

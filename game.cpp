@@ -73,12 +73,30 @@ void Game::setPlayersAmount(int value) {
     playersAmount = value;
 }
 
-bool Game::checkShipsOk() {
+bool Game::checkShipsOk(QTableWidget *input, QTableWidget *deal) {
     for (int i = 0; i < playersAmount; i++) {
+        QSpinBox *sp;
         int ships = players[i].getDeepShip() + players[i].getCoastalShip() + players[i].getHarborShip();
-        if (ships > players[i].getShip())
+        int newShip = players[i].getShip();
+        sp = (QSpinBox*) input->cellWidget(0, i);
+        newShip += sp->value();
+        for (int j = 0; j < deal->rowCount(); j++) {
+            sp = (QSpinBox*) deal->cellWidget(j, 0);
+            int numb = sp->value();
+            if (numb == i + 1) {
+                sp = (QSpinBox*) deal->cellWidget(j, 2);
+                newShip -= sp->value();
+            }
+            sp = (QSpinBox*) deal->cellWidget(j, 1);
+            numb = sp->value();
+            if (numb == i + 1) {
+                sp = (QSpinBox*) deal->cellWidget(j, 2);
+                newShip += sp->value();
+            }
+        }
+        if (ships > newShip)
             return false;
-        players[i].setHarborShip(players[i].getHarborShip() + players[i].getShip() - ships);
+        players[i].setHarborShip(players[i].getHarborShip() + players[i].getShip() - ships);//edit
     }
     return true;
 }
@@ -121,6 +139,39 @@ void Game::updateCompsTable(QTableWidget *comps) {
         item = new QTableWidgetItem(QString::number(players[i].getBalance()));
         item->setFlags(item->flags()^(Qt::ItemIsSelectable|Qt::ItemIsEditable));
         comps->setItem(i, 1, item);
+    }
+}
+
+void Game::updateHarbor(QTableWidget *t, QTableWidget *deal) {
+    for (int i = 0; i < playersAmount; i++) {
+        QSpinBox *spinbox = new QSpinBox;
+        QSpinBox *sp = new QSpinBox;
+        int harbor = players[i].getShip();
+
+        for (int j = 0; j < deal->rowCount(); j++) {
+            int from = 0;
+            int to = 0;
+            sp = (QSpinBox*) deal->cellWidget(j, 0);
+            from = sp->value();
+            sp = (QSpinBox*) deal->cellWidget(j, 1);
+            to = sp->value();
+            if (from - 1 == i) {
+                sp = (QSpinBox*) deal->cellWidget(j, 2);
+                harbor -= sp->value();
+            } else if (to - 1 == i) {
+                sp = (QSpinBox*) deal->cellWidget(j, 2);
+                harbor += sp->value();
+            }
+        }
+        sp = (QSpinBox*) t->cellWidget(0, i);
+        harbor += sp->value();
+        sp = (QSpinBox*) t->cellWidget(3, i);
+        harbor -= sp->value();
+        sp = (QSpinBox*) t->cellWidget(4, i);
+        harbor -= sp->value();
+        spinbox->setMaximum(100000);
+        spinbox->setValue(harbor);
+        t->setCellWidget(5, i, spinbox);
     }
 }
 
@@ -170,8 +221,10 @@ void Game::endYear(QTableWidget *deal, QTableWidget *input, QTableWidget *compsI
     for (int i = 0; i < playersAmount; i++) {
         if (players[i].getBalance() >= 0) {
             players[i].setPercent(0.15 * players[i].getBalance());
+            players[i].addMoney(0.15 * players[i].getBalance());
         } else {
             players[i].setPercent(-0.1 * players[i].getBalance());
+            players[i].addMoney(-0.1 * players[i].getBalance());
         }
     }
     // новые суда
@@ -187,6 +240,8 @@ void Game::endYear(QTableWidget *deal, QTableWidget *input, QTableWidget *compsI
         for (int j = 0; j < playersAmount; j++) {
             sp = (QSpinBox*) input->cellWidget(i, j);
             sp->setValue(0);
+            if (i == 5)
+                sp->setValue(players[j].getShip());
         }
     }
 }
