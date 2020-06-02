@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>5</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="MenuPage">
        <widget class="QWidget" name="layoutWidget">
@@ -27,7 +27,7 @@
           <x>50</x>
           <y>110</y>
           <width>301</width>
-          <height>111</height>
+          <height>142</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
@@ -51,6 +51,21 @@
             </font>
            </property>
           </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Название сеанса</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="gameName"/>
          </item>
          <item>
           <widget class="QPushButton" name="start">
@@ -105,20 +120,20 @@
          <rect>
           <x>80</x>
           <y>40</y>
-          <width>393</width>
-          <height>182</height>
+          <width>361</width>
+          <height>201</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <pointsize>16</pointsize>
+          <pointsize>12</pointsize>
          </font>
         </property>
         <attribute name="horizontalHeaderVisible">
          <bool>false</bool>
         </attribute>
         <attribute name="horizontalHeaderCascadingSectionResizes">
-         <bool>false</bool>
+         <bool>true</bool>
         </attribute>
         <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
          <bool>false</bool>
@@ -169,8 +184,8 @@
          <rect>
           <x>10</x>
           <y>50</y>
-          <width>499</width>
-          <height>235</height>
+          <width>521</width>
+          <height>251</height>
          </rect>
         </property>
         <property name="font">
@@ -278,8 +293,8 @@
          <rect>
           <x>550</x>
           <y>50</y>
-          <width>442</width>
-          <height>115</height>
+          <width>461</width>
+          <height>251</height>
          </rect>
         </property>
         <property name="font">
@@ -343,15 +358,28 @@
          </property>
         </column>
        </widget>
+       <widget class="QPushButton" name="hideWaterInfoTable">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>131</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>скрыть/показать</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="GamePage">
        <widget class="QTableWidget" name="YearTable">
         <property name="geometry">
          <rect>
-          <x>70</x>
+          <x>30</x>
           <y>70</y>
-          <width>502</width>
-          <height>231</height>
+          <width>551</width>
+          <height>251</height>
          </rect>
         </property>
         <row>
@@ -428,10 +456,10 @@
        <widget class="QTableWidget" name="InputTable">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>380</y>
-          <width>501</width>
-          <height>201</height>
+          <x>30</x>
+          <y>370</y>
+          <width>551</width>
+          <height>221</height>
          </rect>
         </property>
         <row>
@@ -498,8 +526,8 @@
        <widget class="QPushButton" name="pushButton_3">
         <property name="geometry">
          <rect>
-          <x>610</x>
-          <y>60</y>
+          <x>1080</x>
+          <y>30</y>
           <width>111</width>
           <height>41</height>
          </rect>
@@ -511,9 +539,9 @@
        <widget class="QPushButton" name="addButton">
         <property name="geometry">
          <rect>
-          <x>820</x>
-          <y>140</y>
-          <width>131</width>
+          <x>1080</x>
+          <y>240</y>
+          <width>111</width>
           <height>31</height>
          </rect>
         </property>
@@ -525,9 +553,9 @@
         <property name="geometry">
          <rect>
           <x>590</x>
-          <y>190</y>
-          <width>478</width>
-          <height>141</height>
+          <y>70</y>
+          <width>481</width>
+          <height>211</height>
          </rect>
         </property>
         <property name="font">
@@ -583,9 +611,9 @@
         <property name="geometry">
          <rect>
           <x>590</x>
-          <y>400</y>
-          <width>421</width>
-          <height>251</height>
+          <y>370</y>
+          <width>431</width>
+          <height>261</height>
          </rect>
         </property>
        </widget>
@@ -593,7 +621,7 @@
         <property name="geometry">
          <rect>
           <x>590</x>
-          <y>350</y>
+          <y>320</y>
           <width>91</width>
           <height>41</height>
          </rect>
@@ -606,7 +634,7 @@
         <property name="geometry">
          <rect>
           <x>680</x>
-          <y>350</y>
+          <y>320</y>
           <width>91</width>
           <height>31</height>
          </rect>
@@ -619,7 +647,7 @@
         <property name="geometry">
          <rect>
           <x>770</x>
-          <y>350</y>
+          <y>320</y>
           <width>91</width>
           <height>31</height>
          </rect>
@@ -632,7 +660,7 @@
         <property name="geometry">
          <rect>
           <x>860</x>
-          <y>350</y>
+          <y>320</y>
           <width>91</width>
           <height>31</height>
          </rect>
@@ -645,7 +673,7 @@
         <property name="geometry">
          <rect>
           <x>950</x>
-          <y>350</y>
+          <y>320</y>
           <width>91</width>
           <height>31</height>
          </rect>
@@ -658,7 +686,7 @@
         <property name="geometry">
          <rect>
           <x>1040</x>
-          <y>350</y>
+          <y>320</y>
           <width>91</width>
           <height>31</height>
          </rect>
@@ -670,11 +698,16 @@
        <widget class="QLabel" name="checkMessage">
         <property name="geometry">
          <rect>
-          <x>750</x>
-          <y>60</y>
-          <width>271</width>
+          <x>700</x>
+          <y>40</y>
+          <width>341</width>
           <height>21</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Проверьте расположение судов по зонам</string>
@@ -684,13 +717,101 @@
         <property name="geometry">
          <rect>
           <x>1030</x>
-          <y>600</y>
-          <width>111</width>
+          <y>480</y>
+          <width>131</width>
           <height>41</height>
          </rect>
         </property>
         <property name="text">
-         <string>Графики</string>
+         <string>графики баланса</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_9">
+        <property name="geometry">
+         <rect>
+          <x>1030</x>
+          <y>530</y>
+          <width>131</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>графики судов</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_15">
+        <property name="geometry">
+         <rect>
+          <x>1030</x>
+          <y>580</y>
+          <width>131</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>графики имущества</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="recomend">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>330</y>
+          <width>331</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>рекомендуется судов на аукцион: </string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_16">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>610</y>
+          <width>131</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>сохранить игру</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="savedMessage">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>610</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Сохранено</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="hideYearTable">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>50</y>
+          <width>121</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>скрыть/показать</string>
         </property>
        </widget>
       </widget>
@@ -698,8 +819,8 @@
        <widget class="QCustomPlot" name="graph" native="true">
         <property name="geometry">
          <rect>
-          <x>110</x>
-          <y>120</y>
+          <x>60</x>
+          <y>140</y>
           <width>331</width>
           <height>211</height>
          </rect>
@@ -708,8 +829,8 @@
        <widget class="QCustomPlot" name="graph_2" native="true">
         <property name="geometry">
          <rect>
-          <x>470</x>
-          <y>120</y>
+          <x>420</x>
+          <y>140</y>
           <width>331</width>
           <height>211</height>
          </rect>
@@ -718,8 +839,8 @@
        <widget class="QCustomPlot" name="graph_3" native="true">
         <property name="geometry">
          <rect>
-          <x>830</x>
-          <y>120</y>
+          <x>780</x>
+          <y>140</y>
           <width>331</width>
           <height>211</height>
          </rect>
@@ -728,8 +849,8 @@
        <widget class="QCustomPlot" name="graph_4" native="true">
         <property name="geometry">
          <rect>
-          <x>110</x>
-          <y>410</y>
+          <x>60</x>
+          <y>430</y>
           <width>331</width>
           <height>211</height>
          </rect>
@@ -738,8 +859,8 @@
        <widget class="QCustomPlot" name="graph_5" native="true">
         <property name="geometry">
          <rect>
-          <x>470</x>
-          <y>410</y>
+          <x>420</x>
+          <y>430</y>
           <width>331</width>
           <height>211</height>
          </rect>
@@ -748,8 +869,8 @@
        <widget class="QCustomPlot" name="graph_6" native="true">
         <property name="geometry">
          <rect>
-          <x>830</x>
-          <y>410</y>
+          <x>780</x>
+          <y>430</y>
           <width>331</width>
           <height>211</height>
          </rect>
@@ -758,8 +879,8 @@
        <widget class="QLabel" name="graph1Name">
         <property name="geometry">
          <rect>
-          <x>110</x>
-          <y>60</y>
+          <x>60</x>
+          <y>80</y>
           <width>151</width>
           <height>31</height>
          </rect>
@@ -771,8 +892,8 @@
        <widget class="QLabel" name="graph2Name">
         <property name="geometry">
          <rect>
-          <x>480</x>
-          <y>60</y>
+          <x>430</x>
+          <y>80</y>
           <width>151</width>
           <height>31</height>
          </rect>
@@ -784,8 +905,8 @@
        <widget class="QLabel" name="graph3Name">
         <property name="geometry">
          <rect>
-          <x>840</x>
-          <y>60</y>
+          <x>790</x>
+          <y>80</y>
           <width>151</width>
           <height>31</height>
          </rect>
@@ -797,8 +918,8 @@
        <widget class="QLabel" name="graph4Name">
         <property name="geometry">
          <rect>
-          <x>110</x>
-          <y>360</y>
+          <x>60</x>
+          <y>380</y>
           <width>151</width>
           <height>31</height>
          </rect>
@@ -810,8 +931,8 @@
        <widget class="QLabel" name="graph5Name">
         <property name="geometry">
          <rect>
-          <x>470</x>
-          <y>360</y>
+          <x>420</x>
+          <y>380</y>
           <width>151</width>
           <height>31</height>
          </rect>
@@ -823,8 +944,8 @@
        <widget class="QLabel" name="graph6Name">
         <property name="geometry">
          <rect>
-          <x>830</x>
-          <y>350</y>
+          <x>780</x>
+          <y>370</y>
           <width>151</width>
           <height>31</height>
          </rect>
@@ -836,14 +957,398 @@
        <widget class="QPushButton" name="pushButton_5">
         <property name="geometry">
          <rect>
-          <x>1020</x>
+          <x>50</x>
           <y>20</y>
-          <width>101</width>
+          <width>141</width>
           <height>31</height>
          </rect>
         </property>
         <property name="text">
-         <string>назад</string>
+         <string>к игре</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_8">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>20</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>графики судов</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_14">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>20</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>графики имущества</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="GraphShipsPage">
+       <widget class="QLabel" name="graph1Name_2">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>80</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 1</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph6Name_2">
+        <property name="geometry">
+         <rect>
+          <x>780</x>
+          <y>370</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 6</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_6">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>20</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>к игре</string>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graphShips_3" native="true">
+        <property name="geometry">
+         <rect>
+          <x>780</x>
+          <y>140</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph3Name_2">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>80</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 3</string>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graphShips_2" native="true">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>140</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph4Name_2">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>380</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 4</string>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graphShips_1" native="true">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>140</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph2Name_2">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>80</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 2</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph5Name_2">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>380</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 5</string>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graphShips_5" native="true">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>430</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graphShips_6" native="true">
+        <property name="geometry">
+         <rect>
+          <x>780</x>
+          <y>430</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graphShips_4" native="true">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>430</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_7">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>20</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>графики баланса</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_13">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>20</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>графики имущества</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="GraphPropertyPage">
+       <widget class="QLabel" name="graph2Name_3">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>80</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 2</string>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graphProperty_6" native="true">
+        <property name="geometry">
+         <rect>
+          <x>780</x>
+          <y>430</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph6Name_3">
+        <property name="geometry">
+         <rect>
+          <x>780</x>
+          <y>370</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 6</string>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graphProperty_1" native="true">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>140</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graphProperty_2" native="true">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>140</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graphProperty_3" native="true">
+        <property name="geometry">
+         <rect>
+          <x>780</x>
+          <y>140</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph1Name_3">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>80</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 1</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_10">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>20</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>графики баланса</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph5Name_3">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>380</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 5</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_11">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>20</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>графики судов</string>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graphProperty_4" native="true">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>430</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QCustomPlot" name="graphProperty_5" native="true">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>430</y>
+          <width>331</width>
+          <height>211</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph3Name_3">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>80</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 3</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="graph4Name_3">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>380</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Компания 4</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_12">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>20</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>к игре</string>
         </property>
        </widget>
       </widget>
@@ -887,6 +1392,19 @@
          <string>Сетевая игра(игрок)</string>
         </property>
        </widget>
+       <widget class="QPushButton" name="download">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>290</y>
+          <width>241</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Загрузить игру</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="UserPage">
        <widget class="QLabel" name="waitMessage">
@@ -908,7 +1426,7 @@
           <x>40</x>
           <y>150</y>
           <width>331</width>
-          <height>201</height>
+          <height>211</height>
          </rect>
         </property>
         <row>
@@ -978,14 +1496,57 @@
           <x>410</x>
           <y>310</y>
           <width>91</width>
-          <height>31</height>
+          <height>41</height>
          </rect>
         </property>
         <property name="text">
          <string>Отправить</string>
         </property>
        </widget>
+       <widget class="QPushButton" name="send_2">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>150</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>график 
+баланса</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="send_3">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>200</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>график 
+судов</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="send_4">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>250</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>график 
+имущества</string>
+        </property>
+       </widget>
       </widget>
+      <widget class="QWidget" name="UserGraphs"/>
      </widget>
     </item>
    </layout>
@@ -1004,13 +1565,13 @@
  <connections>
   <connection>
    <sender>start</sender>
-   <signal>pressed()</signal>
+   <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>start()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>87</x>
-     <y>228</y>
+     <x>107</x>
+     <y>259</y>
     </hint>
     <hint type="destinationlabel">
      <x>5</x>
@@ -1020,7 +1581,7 @@
   </connection>
   <connection>
    <sender>pushButton</sender>
-   <signal>pressed()</signal>
+   <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>nextPage()</slot>
    <hints>
@@ -1029,14 +1590,14 @@
      <y>354</y>
     </hint>
     <hint type="destinationlabel">
-     <x>648</x>
-     <y>326</y>
+     <x>1277</x>
+     <y>320</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>pushButton_2</sender>
-   <signal>pressed()</signal>
+   <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>nextPage()</slot>
    <hints>
@@ -1045,20 +1606,20 @@
      <y>390</y>
     </hint>
     <hint type="destinationlabel">
-     <x>655</x>
-     <y>365</y>
+     <x>1271</x>
+     <y>371</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>pushButton_3</sender>
-   <signal>pressed()</signal>
+   <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>calc()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>729</x>
-     <y>109</y>
+     <x>1089</x>
+     <y>79</y>
     </hint>
     <hint type="destinationlabel">
      <x>1282</x>
@@ -1068,13 +1629,13 @@
   </connection>
   <connection>
    <sender>addButton</sender>
-   <signal>pressed()</signal>
+   <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>addDeal()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>829</x>
-     <y>179</y>
+     <x>1089</x>
+     <y>249</y>
     </hint>
     <hint type="destinationlabel">
      <x>2</x>
@@ -1084,13 +1645,13 @@
   </connection>
   <connection>
    <sender>company1</sender>
-   <signal>pressed()</signal>
+   <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>activeCompany()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>681</x>
-     <y>374</y>
+     <x>689</x>
+     <y>369</y>
     </hint>
     <hint type="destinationlabel">
      <x>1285</x>
@@ -1100,13 +1661,13 @@
   </connection>
   <connection>
    <sender>company2</sender>
-   <signal>pressed()</signal>
+   <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>activeCompany()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>767</x>
-     <y>382</y>
+     <x>776</x>
+     <y>359</y>
     </hint>
     <hint type="destinationlabel">
      <x>1280</x>
@@ -1116,13 +1677,13 @@
   </connection>
   <connection>
    <sender>company3</sender>
-   <signal>pressed()</signal>
+   <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>activeCompany()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>816</x>
-     <y>379</y>
+     <x>825</x>
+     <y>359</y>
     </hint>
     <hint type="destinationlabel">
      <x>1284</x>
@@ -1132,13 +1693,13 @@
   </connection>
   <connection>
    <sender>company4</sender>
-   <signal>pressed()</signal>
+   <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>activeCompany()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>906</x>
-     <y>377</y>
+     <x>915</x>
+     <y>359</y>
     </hint>
     <hint type="destinationlabel">
      <x>1279</x>
@@ -1148,13 +1709,13 @@
   </connection>
   <connection>
    <sender>company5</sender>
-   <signal>pressed()</signal>
+   <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>activeCompany()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>999</x>
-     <y>367</y>
+     <x>1008</x>
+     <y>359</y>
     </hint>
     <hint type="destinationlabel">
      <x>1283</x>
@@ -1164,13 +1725,13 @@
   </connection>
   <connection>
    <sender>company6</sender>
-   <signal>pressed()</signal>
+   <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>activeCompany()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1127</x>
-     <y>374</y>
+     <x>1136</x>
+     <y>359</y>
     </hint>
     <hint type="destinationlabel">
      <x>1281</x>
@@ -1230,15 +1791,15 @@
    <sender>pushButton_4</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>endGame()</slot>
+   <slot>toGraphBalancePage()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1077</x>
-     <y>626</y>
+     <x>1086</x>
+     <y>529</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1282</x>
-     <y>651</y>
+     <x>1279</x>
+     <y>652</y>
     </hint>
    </hints>
   </connection>
@@ -1246,15 +1807,303 @@
    <sender>pushButton_5</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>back()</slot>
+   <slot>toGamePage()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1060</x>
-     <y>42</y>
+     <x>199</x>
+     <y>51</y>
     </hint>
     <hint type="destinationlabel">
      <x>1015</x>
      <y>5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toGraphBalancePage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>349</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1091</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toGamePage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>915</x>
+     <y>7</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toGraphShipsPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>429</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1282</x>
+     <y>64</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toGraphShipsPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1121</x>
+     <y>579</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1283</x>
+     <y>714</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_14</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toGraphPropertyPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>594</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1276</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_13</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toGraphPropertyPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>581</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1282</x>
+     <y>125</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_12</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toGamePage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>850</x>
+     <y>-2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_10</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toGraphBalancePage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>349</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1273</x>
+     <y>156</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toGraphShipsPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>499</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1282</x>
+     <y>204</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_15</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toGraphPropertyPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1085</x>
+     <y>629</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1276</x>
+     <y>752</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>send</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sendToServer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>456</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>449</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_16</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>saveGame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>82</x>
+     <y>637</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>637</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>download</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>downloadGame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>167</x>
+     <y>332</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>333</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hideWaterInfoTable</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>hideWaterInfoTable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>74</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hideYearTable</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>hideYearTable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>73</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>87</x>
+     <y>2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>send_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toGraphBalancePage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>487</x>
+     <y>178</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>505</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>send_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toGraphShipsPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>491</x>
+     <y>232</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>478</x>
+     <y>4</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>send_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toGraphPropertyPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>481</x>
+     <y>281</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>8</y>
     </hint>
    </hints>
   </connection>
@@ -1269,5 +2118,14 @@
   <slot>joinToServer()</slot>
   <slot>endGame()</slot>
   <slot>back()</slot>
+  <slot>toGraphBalancePage()</slot>
+  <slot>toGamePage()</slot>
+  <slot>toGraphShipsPage()</slot>
+  <slot>toGraphPropertyPage()</slot>
+  <slot>sendToServer()</slot>
+  <slot>saveGame()</slot>
+  <slot>downloadGame()</slot>
+  <slot>hideWaterInfoTable()</slot>
+  <slot>hideYearTable()</slot>
  </slots>
 </ui>

@@ -21,11 +21,12 @@ public:
     void setPlayersAmount(int value);
     void setShips(QTableWidget *t);
     void setCatch();
+    int getShips();
     void calcCatch(QTableWidget *t, QTableWidget *water);
     void updateCompsTable(QTableWidget *comps);
     void updateWaterInfoTable(QTableWidget *t, QTableWidget *water);
     void updateYearTable(QTableWidget *t, QTableWidget *years);
-    void updateHarbor(QTableWidget *t, QTableWidget *deal);
+    void updateHarbor(QTableWidget *t, QTableWidget *deal, int serverStatus);
     int getYear() const;
 };
 

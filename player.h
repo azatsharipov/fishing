@@ -4,7 +4,8 @@
 
 
 class Player {
-    int ship, deepShip, coastalShip, harborShip, deepCatch, coastalCatch, fishSales, interest, balance, revenue, percent, moneyForNew;
+    int ship, deepShip, coastalShip, harborShip, deepCatch, coastalCatch,
+        fishSales, interest, balance, revenue, percent, moneyForNew;
 public:
     Player();
     Player(int n);

@@ -127,6 +127,14 @@ void Game::setCatch() {
     }
 }
 
+int Game::getShips() {
+    int ret = 0;
+    for (int i = 0; i < playersAmount; i++) {
+        ret += players[i].getShip();
+    }
+    return ret;
+}
+
 void Game::updateCompsTable(QTableWidget *comps) {
     QTableWidgetItem *item;
     for (int i = 0; i < playersAmount; i++) {
@@ -142,10 +150,15 @@ void Game::updateCompsTable(QTableWidget *comps) {
     }
 }
 
-void Game::updateHarbor(QTableWidget *t, QTableWidget *deal) {
+void Game::updateHarbor(QTableWidget *t, QTableWidget *deal, int serverStatus) {
     for (int i = 0; i < playersAmount; i++) {
         QSpinBox *spinbox = new QSpinBox;
         QSpinBox *sp = new QSpinBox;
+        int ships = players[i].getShip();
+        sp = (QSpinBox*) t->cellWidget(3, i);
+        int deepShip = sp->value();
+        sp = (QSpinBox*) t->cellWidget(4, i);
+        int coastalShip = sp->value();
         int harbor = players[i].getShip();
 
         for (int j = 0; j < deal->rowCount(); j++) {
@@ -165,13 +178,30 @@ void Game::updateHarbor(QTableWidget *t, QTableWidget *deal) {
         }
         sp = (QSpinBox*) t->cellWidget(0, i);
         harbor += sp->value();
+        ships = harbor;
         sp = (QSpinBox*) t->cellWidget(3, i);
         harbor -= sp->value();
         sp = (QSpinBox*) t->cellWidget(4, i);
         harbor -= sp->value();
         spinbox->setMaximum(100000);
         spinbox->setValue(harbor);
+        if (serverStatus == 1) {
+            spinbox->setMaximum(spinbox->value());
+            spinbox->setMinimum(spinbox->value());
+        }
         t->setCellWidget(5, i, spinbox);
+        sp = (QSpinBox*) t->cellWidget(3, i);
+        sp->setMaximum(ships - coastalShip);
+        if (serverStatus == 1) {
+            sp->setMaximum(sp->value());
+            sp->setMinimum(sp->value());
+        }
+        sp = (QSpinBox*) t->cellWidget(4, i);
+        sp->setMaximum(ships - deepShip);
+        if (serverStatus == 1) {
+            sp->setMaximum(sp->value());
+            sp->setMinimum(sp->value());
+        }
     }
 }
 
